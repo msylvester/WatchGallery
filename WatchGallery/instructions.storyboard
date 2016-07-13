@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jck-qi-sg8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Instruction View Controller-->
+        <scene sceneID="HYK-94-xaf">
+            <objects>
+                <viewController id="jck-qi-sg8" customClass="InstructionViewController" customModule="Gallery_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fVS-qb-Dav"/>
+                        <viewControllerLayoutGuide type="bottom" id="h04-5d-ZoY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qfZ-s0-vT8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Foi-9N-n72">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <connections>
+                                    <segue destination="8VO-y1-op2" kind="embed" id="N1D-UA-NgZ"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0r4-IR-dA8">
+                                <rect key="frame" x="20" y="40" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.086735173969999996" blue="0.92219595379999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.32389615770000002" green="0.8787983425" blue="0.86665754679999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-rH-85C">
+                                <rect key="frame" x="484" y="540" width="96" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Go To App">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNextButton:" destination="jck-qi-sg8" eventType="touchUpInside" id="BbL-9l-miP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Foi-9N-n72" firstAttribute="leading" secondItem="qfZ-s0-vT8" secondAttribute="leading" id="5XB-st-LXB"/>
+                            <constraint firstItem="h04-5d-ZoY" firstAttribute="top" secondItem="Foi-9N-n72" secondAttribute="bottom" id="CVO-Yc-T3H"/>
+                            <constraint firstItem="0r4-IR-dA8" firstAttribute="top" secondItem="fVS-qb-Dav" secondAttribute="bottom" constant="20" id="DSH-t7-3Rp"/>
+                            <constraint firstAttribute="trailing" secondItem="6lc-rH-85C" secondAttribute="trailing" constant="20" id="FEf-VN-Xwh"/>
+                            <constraint firstItem="0r4-IR-dA8" firstAttribute="leading" secondItem="qfZ-s0-vT8" secondAttribute="leading" constant="20" id="WhG-xN-YLF"/>
+                            <constraint firstAttribute="trailing" secondItem="Foi-9N-n72" secondAttribute="trailing" id="bJx-hN-9a9"/>
+                            <constraint firstItem="h04-5d-ZoY" firstAttribute="top" secondItem="6lc-rH-85C" secondAttribute="bottom" constant="20" id="cIS-zS-LJV"/>
+                            <constraint firstItem="Foi-9N-n72" firstAttribute="top" secondItem="fVS-qb-Dav" secondAttribute="bottom" id="cvO-be-4cG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Foi-9N-n72" id="hWo-vm-Il4"/>
+                        <outlet property="pageControl" destination="0r4-IR-dA8" id="CoE-B3-h07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YrA-Cw-Lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-1109"/>
+        </scene>
+        <!--Instruction Page View Controller-->
+        <scene sceneID="zFG-nt-86X">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="8VO-y1-op2" customClass="InstructionPageViewController" customModule="Gallery_Finder" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqO-ne-M3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-274"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pYr-10-eSt">
+            <objects>
+                <viewController storyboardIdentifier="GreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U96-lz-Xzj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MdB-Id-9et"/>
+                        <viewControllerLayoutGuide type="bottom" id="3vn-Ue-8Q4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5K-db-TSH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstrOne-1" translatesAutoresizingMaskIntoConstraints="NO" id="9IQ-Fb-zdi">
+                                <rect key="frame" x="20" y="144" width="381" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="pAc-s7-Vdl"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Find local Art Galleries  🚗" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HgF-zT-Bze">
+                                <rect key="frame" x="20" y="520" width="381" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="bJO-vU-3Jy"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.99140694787851835" blue="0.98137506712620937" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="HgF-zT-Bze" secondAttribute="trailing" constant="-7" id="GBl-SF-GBz"/>
+                            <constraint firstItem="9IQ-Fb-zdi" firstAttribute="leading" secondItem="HgF-zT-Bze" secondAttribute="leading" id="K27-dO-cSx"/>
+                            <constraint firstItem="9IQ-Fb-zdi" firstAttribute="trailing" secondItem="HgF-zT-Bze" secondAttribute="trailing" id="M1B-8P-eQw"/>
+                            <constraint firstItem="3vn-Ue-8Q4" firstAttribute="top" secondItem="HgF-zT-Bze" secondAttribute="bottom" constant="173" id="Twh-C8-W4M"/>
+                            <constraint firstItem="HgF-zT-Bze" firstAttribute="leading" secondItem="h5K-db-TSH" secondAttribute="leadingMargin" id="rFI-ex-phc"/>
+                            <constraint firstItem="9IQ-Fb-zdi" firstAttribute="top" secondItem="MdB-Id-9et" secondAttribute="bottom" constant="124" id="zXE-wN-7D1"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GD-rx-M5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-755" y="601"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EVA-aM-8un">
+            <objects>
+                <viewController storyboardIdentifier="RedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P48-o3-HbZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnj-KG-HcQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="os4-nk-Oph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l65-f7-y7J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InstrOne" highlightedImage="InstrOne" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-ND-aOF">
+                                <rect key="frame" x="17" y="144" width="381" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="QfT-hH-w52"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Browse Art Galleries 🤘🏻" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zgh-YH-baq">
+                                <rect key="frame" x="20" y="511" width="381" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Qd9-Fo-q8y"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IOh-ND-aOF" firstAttribute="top" secondItem="gnj-KG-HcQ" secondAttribute="bottom" constant="124" id="aor-fp-D6f"/>
+                            <constraint firstItem="IOh-ND-aOF" firstAttribute="leading" secondItem="l65-f7-y7J" secondAttribute="leadingMargin" constant="-3" id="eAJ-pk-dAj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zgh-YH-baq" secondAttribute="trailing" constant="-7" id="fjj-Ja-OW0"/>
+                            <constraint firstItem="IOh-ND-aOF" firstAttribute="centerX" secondItem="l65-f7-y7J" secondAttribute="centerX" id="iUf-ZR-32T"/>
+                            <constraint firstItem="os4-nk-Oph" firstAttribute="top" secondItem="zgh-YH-baq" secondAttribute="bottom" constant="173" id="m1n-gh-ZuW"/>
+                            <constraint firstItem="zgh-YH-baq" firstAttribute="leading" secondItem="l65-f7-y7J" secondAttribute="leadingMargin" id="xNt-H6-qKl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lQ-Nh-ctD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="601"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="InstrOne" width="355" height="237"/>
+        <image name="InstrOne-1" width="359" height="156"/>
+    </resources>
+</document>
